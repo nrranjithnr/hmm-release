@@ -52,13 +52,13 @@ Generate SHA256 checksums for all binaries:
 
 ```bash
 # Linux/macOS
-shasum -a 256 hmm-* > checksums.txt
+shasum -a 256 hmm-* > SHA256SUMS.txt
 
 # Or using sha256sum
-sha256sum hmm-* > checksums.txt
+sha256sum hmm-* > SHA256SUMS.txt
 ```
 
-Include the `checksums.txt` file with each release.
+Include the `SHA256SUMS.txt` file with each release.
 
 ## Reporting Issues
 
