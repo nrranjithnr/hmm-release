@@ -1,0 +1,44 @@
+name: Validate Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  validate:
+    name: Validate Release Assets
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Download release assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Get release assets
+          RELEASE_TAG="${GITHUB_REF#refs/tags/}"
+          echo "Validating release: $RELEASE_TAG"
+          
+          # This is a placeholder for validation logic
+          # In a real scenario, you would:
+          # 1. Download the release assets
+          # 2. Verify checksums
+          # 3. Run basic tests on the binaries
+          
+          echo "Release validation workflow triggered"
+          echo "Note: Add specific validation logic as needed"
+      
+      - name: Check for required assets
+        run: |
+          echo "Checking for required binary assets..."
+          echo "Expected binaries:"
+          echo "  - hmm-linux-amd64"
+          echo "  - hmm-linux-arm64"
+          echo "  - hmm-darwin-amd64"
+          echo "  - hmm-darwin-arm64"
+          echo "  - hmm-windows-amd64.exe"
+          echo "  - SHA256SUMS.txt"
+          echo ""
+          echo "Please ensure all platform binaries are included in the release."

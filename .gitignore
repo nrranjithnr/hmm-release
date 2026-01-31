@@ -1,0 +1,54 @@
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+tmp/
+temp/
+
+# Build artifacts (if any automation is added)
+dist/
+build/
+out/
+
+# Node modules (if any tooling is added)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python cache (if any scripts are added)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Test coverage
+coverage/
+*.cover
+.coverage
+
+# Local environment files
+.env
+.env.local
